@@ -12,30 +12,18 @@ class Animal {
   }
 }
 
-class Cat extends Animal {
-  constructor(species) {
-    super(species);
-  }
-
-  purr() {
-    console.log("purr");
-  }
-}
-
 class Dog extends Animal {
-  constructor(species) {
-    super(species);
-  }
-
   bark() {
     console.log("woof");
   }
 }
 
-const myCat = new Cat("Siamese");
-myCat.makeSound();
-myCat.purr();      
+class Cat extends Animal {
+  purr() {
+    console.log("purr");
+  }
+}
 
-const myDog = new Dog("Golden Retriever");
-myDog.makeSound(); 
-myDog.bark();      
+window.Animal = Animal;
+window.Dog = Dog;
+window.Cat = Cat;
